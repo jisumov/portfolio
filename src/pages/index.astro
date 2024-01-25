@@ -1,0 +1,73 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import Badge from "../components/Badge.astro";
+import LinkedInIcon from "../components/icons/LinkedIn.astro";
+import GitHubIcon from "../components/icons/GitHub.astro";
+import MailIcon from "../components/icons/Mail.astro";
+import CodeIcon from "../components/icons/Code.astro";
+import SocialPill from "../components/SocialPill.astro";
+import Experience from "../components/Experience.astro";
+import Briefcase from "../components/icons/Briefcase.astro";
+import Projects from "../components/Projects.astro";
+---
+
+<Layout
+  title="jisumov's Portfolio - Web Developer with 1 year of experience"
+  description="Hire jisumov to create a web app."
+>
+  <main class="px-4">
+    <SectionContainer class="py-44 pb-32">
+      <img
+        class="rounded-full size-12 mb-4"
+        src="https://avatars.githubusercontent.com/u/142860946?v=4"
+        alt="jisumov's photo"
+      />
+      <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-2 pb-6 lg:pb-10">
+        Hi, I'm jisumov
+        <a
+          href="https://linkedin.com/in/jisumov"
+          target="_blank"
+          rel="noopener"
+          class="flex justify-center items-center"
+        >
+          <Badge>Available to work</Badge>
+        </a>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        <span>+1 year of experience.</span>
+        <span class="text-yellow-200/90">Web Developer and Dreamer. </span>
+        <span class="text-red-200/90">From Bogotá, Colombia. </span>
+        <span class="opacity-75">Specialized in creating solutions 😊</span>
+      </h2>
+      <nav class="flex gap-4 mt-8 flex-wrap">
+        <SocialPill href="https://linkedin.com/in/jisumov">
+          <LinkedInIcon class="size-4 md:size-6" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/jisumov">
+          <GitHubIcon class="size-4 md:size-6" />
+          GitHub
+        </SocialPill>
+        <SocialPill href="mailto:jisumov@gmail.com">
+          <MailIcon class="size-4 md:size-6" />
+          jisumov@gmail.com
+        </SocialPill>
+      </nav>
+    </SectionContainer>
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <Briefcase class="size-7"/>
+        Work Experience
+      </h2>
+      <Experience />
+    </SectionContainer>
+    <SectionContainer id="projects">
+      <h2 class="text-3xl font-semibold mb-8 flex gap-x-3 items-center">
+        <CodeIcon class="size-7"/>
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
+  </main>
+</Layout>

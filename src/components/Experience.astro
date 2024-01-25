@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Jul 2023 - Dec 2023',
+        title: 'Data Analyst - UNALab',
+        description: 'I carried out the definition, collection, curation, analysis and documentation of data on digital maturity in the senior management of the National University of Colombia. A dashboard was fed with the processed data to support the University\'s decision making around digital transformation in teaching, research, extension and academic-administrative governance.',
+    },
+    {
+        date: 'Aug 2022 - Jun 2023',
+        title: 'Programming Tutor - UNAL',
+        description: 'I instructed students from different careers in Computer Programming, Object-Oriented Programming, Databases and Data Structures. I managed to encourage effective study habits, intuitive abstractions from complex concepts and out-of-the-box thinking for all their needs.',
+    },
+    {
+        title: 'Technical Support - UNAL',
+        date: 'Feb 2023 - Jun 2023',
+        description: 'I managed both the front end of the website as the YouTube and Google Classroom dashboard for the Jorge Eliécer Gaitán lectures. I was able to optimize the work of my colleagues by implementing Whisper AI for transcriptions and, thus, enrich the audiovisual content.',
+    },
+]
+---
+
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-4">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }
+</ol>

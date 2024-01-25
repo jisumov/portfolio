@@ -1,0 +1,47 @@
+---
+import Python from "./icons/Python.astro";
+
+const TAGS = {
+  PYTHON: {
+    name: "Python",
+    class: "bg-[#306998] text-white",
+    icon: Python,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Learning",
+    description:
+      "My Personal Odyssey with Comprehensive Insights, Notes, Code, and Beyond, Unveiling the World of Learning.",
+    link: "https://github.com/jisumov/learning",
+    github: "https://github.com/jisumov/learning",
+    image: "/projects/learning.webp",
+    tags: [TAGS.PYTHON],
+  },
+];
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                <tag.icon class="size-4"/>
+                {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        class="rounded shadow-2xl shadow-white/10"
+        src={image}
+        alt={`Screenshot from project ${image}`}
+      />
+    </article>
+  ))
+}
