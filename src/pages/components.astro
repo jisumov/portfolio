@@ -1,0 +1,33 @@
+---
+import Badge from "@/components/Badge.astro";
+import LinkButton from "@/components/LinkButton.astro";
+import LinkedIn from "@/components/icons/LinkedIn.astro";
+import Arrow from "@/components/icons/Arrow.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout
+  title="Design System jisumov's Portfolio"
+  description="My Portfolio Components Catalog"
+>
+  <SectionContainer class="py-44 pb-32 flex flex-col gap-y-10">
+    <article class="mb-10">
+      <h1 class="mb-4 text-xl font-semibold">&lt;Badge /&gt;</h1>
+      <Badge>Available to work</Badge>
+    </article>
+    <article class="mb-10">
+      <h1 class="mb-4 text-xl font-semibold">&lt;LinkButton /&gt;</h1>
+      <article class="flex gap-4 flex-wrap">
+        <LinkButton href="https://linkedin.com/in/jisumov">
+          <LinkedIn class="size-4 md:size-6" />
+          LinkedIn
+        </LinkButton>
+        <LinkButton href="#">
+          Learn more{" "}
+          <Arrow />
+        </LinkButton>
+      </article>
+    </article>
+  </SectionContainer>
+</Layout>
